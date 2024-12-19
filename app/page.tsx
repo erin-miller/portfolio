@@ -10,7 +10,7 @@ export default function Home() {
       </div>
       <div className="text-2xl pt-3 pl-2 max-w-2xl py-10">
         <p>
-          Hi there, my name is Erin Miller. I'm passionate about building
+          Hi there, my name is Erin Miller. I&apos;m passionate about building
           software that drives positive change in the environment. From design
           to clean code, I love bringing projects to life from the ground up.
         </p>

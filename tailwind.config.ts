@@ -15,7 +15,7 @@ export default {
         cbrown: "#4c2523",
         moss: "#809848",
         darkmoss: "#4b4f28",
-        olive: "#c5dd9f",
+        olive: "#cfe8a7",
         darkolive: "#a4bf7c",
       },
     },

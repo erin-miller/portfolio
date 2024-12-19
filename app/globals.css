@@ -21,7 +21,7 @@ body {
 }
 
 .title {
-    @apply font-[family-name:var(--font-notable)]
+    @apply font-[family-name:var(--font-notable)] scale-up
 }
 
 h1 {
@@ -29,7 +29,11 @@ h1 {
 }
 
 .filled-border {
-    @apply bg-moss border-moss border-2 rounded-3xl inline-block p-2
+    @apply bg-darkolive border-darkmoss border-2 rounded-3xl inline-block p-2
+}
+
+.filled-border:hover {
+    @apply border-cbrown
 }
 
 .dotted-border {
@@ -37,5 +41,17 @@ h1 {
 }
 
 .icon-container {
-    @apply hover:text-cpurple flex items-center space-x-2
+    @apply hover:text-cpurple flex items-center space-x-2 hover:scale-105 
+}
+
+.icon {
+    @apply h-full w-full fill-current stroke-current;
+}
+
+.nav-btn {
+    @apply hover:text-cbrown scale-up filled-border 
+}
+
+.scale-up {
+    @apply hover:scale-105 transition duration-150
 }

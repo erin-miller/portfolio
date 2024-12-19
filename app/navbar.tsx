@@ -9,10 +9,13 @@ export default function Navbar() {
     setIsVisible(!isVisible);
   };
 
+  const homeLink = "/";
+  const resumeLink = "/resume.pdf";
+
   return (
-    <nav className="text-cbrown text-nowrap w-2/3 h1">
+    <nav className="h1 text-darkmoss text-nowrap w-2/3">
       <div className="container flex min-w-min">
-        <div className="text-4xl font-bold w-full text-moss pr-12">
+        <div className="text-4xl font-bold w-full text-olive">
           <Link
             href="/"
             className="title hover:text-darkolive bg-cbrown border-cbrown border-2 rounded-3xl inline-block pb-2 px-2"
@@ -24,17 +27,16 @@ export default function Navbar() {
         <div className="hidden md:flex font-bold text-xl">
           <ul className="flex space-x-4">
             <li>
-              <Link
-                href="/contact"
-                className="hover:text-darkmoss filled-border"
-              >
-                CONTACT
+              <Link href={homeLink} className="nav-btn">
+                HOME
               </Link>
             </li>
             <li>
               <Link
-                href="/resume"
-                className="hover:text-darkmoss filled-border"
+                href={resumeLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="nav-btn"
               >
                 RESUME
               </Link>
@@ -58,31 +60,31 @@ export default function Navbar() {
             >
               <path
                 d="M2 12.32H22"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
               <path
                 d="M2 18.32H22"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
               <path
                 d="M2 6.32001H22"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </button>
           {isVisible && (
-            <div className="absolute right-1 text-cbrown font-bold rounded-xl shadow-md bg-darkolive border-moss border-2 text-left md:hidden">
+            <div className="absolute right-1 p-1 text-cbrown text-center font-bold rounded-xl shadow-md bg-darkolive border-darkmoss border-2 text-left md:hidden">
               <ul className="space-y-2 p-2">
-                <li className="hover:text-darkmoss">
-                  <Link href="/contact">CONTACT</Link>
+                <li className="hover:text-darkmoss hover:bg-olive rounded-full">
+                  <Link href="/">HOME</Link>
                 </li>
-                <li className="hover:text-darkmoss">
+                <li className="hover:text-darkmoss hover:bg-olive rounded-full">
                   <Link href="/resume">RESUME</Link>
                 </li>
               </ul>

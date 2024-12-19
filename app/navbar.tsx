@@ -10,53 +10,85 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="text-cbrown text-nowrap w-2/3 font-[family-name:var(--font-merriweather)]">
-      <div className="container flex">
-        <div className="hover:text-cbrown text-4xl font-bold w-full text-cpurple pr-5">
-          <Link href="/">ERIN MILLER</Link>
-        </div>
-
-        {/* menu btn */}
-        <button className="md:hidden" onClick={toggleMenu}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            className="w-6 h-6"
+    <nav className="text-cbrown text-nowrap w-2/3 h1">
+      <div className="container flex min-w-min">
+        <div className="text-4xl font-bold w-full text-moss pr-12">
+          <Link
+            href="/"
+            className="title hover:text-darkolive bg-cbrown border-cbrown border-2 rounded-3xl inline-block pb-2 px-2"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h16m-7 6h7"
-            />
-          </svg>
-        </button>
+            ERIN MILLER
+          </Link>
+        </div>
 
         <div className="hidden md:flex font-bold text-xl">
           <ul className="flex space-x-4">
-            <li className="hover:text-moss">
-              <Link href="/contact">CONTACT</Link>
+            <li>
+              <Link
+                href="/contact"
+                className="hover:text-darkmoss filled-border"
+              >
+                CONTACT
+              </Link>
             </li>
-            <li className="hover:text-moss">
-              <Link href="/resume">RESUME</Link>
+            <li>
+              <Link
+                href="/resume"
+                className="hover:text-darkmoss filled-border"
+              >
+                RESUME
+              </Link>
             </li>
           </ul>
         </div>
 
-        {isVisible && (
-          <div className="absolute top-14 right-16 bg-moss text-cpurple font-bold rounded-xl text-center md:hidden">
-            <ul className="space-y-2 p-4">
-              <li className="hover:text-cbrown">
-                <Link href="/contact">CONTACT</Link>
-              </li>
-              <li className="hover:text-cbrown">
-                <Link href="/resume">RESUME</Link>
-              </li>
-            </ul>
-          </div>
-        )}
+        {/* menu btn */}
+        <div className="relative inline-block">
+          <button
+            className="md:hidden filled-border hover:text-cpurple"
+            onClick={toggleMenu}
+          >
+            <svg
+              width="25"
+              height="25"
+              stroke="currentColor"
+              fill="currentColor"
+              viewBox="-0.5 0 25 25"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2 12.32H22"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M2 18.32H22"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M2 6.32001H22"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          {isVisible && (
+            <div className="absolute right-1 text-cbrown font-bold rounded-xl shadow-md bg-darkolive border-moss border-2 text-left md:hidden">
+              <ul className="space-y-2 p-2">
+                <li className="hover:text-darkmoss">
+                  <Link href="/contact">CONTACT</Link>
+                </li>
+                <li className="hover:text-darkmoss">
+                  <Link href="/resume">RESUME</Link>
+                </li>
+              </ul>
+            </div>
+          )}
+        </div>
       </div>
     </nav>
   );

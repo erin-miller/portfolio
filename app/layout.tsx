@@ -2,18 +2,24 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-import { Roboto, Merriweather } from "next/font/google";
+import { Space_Grotesk, Audiowide, Notable } from "next/font/google";
 import Navbar from "./navbar";
 import Footer from "./footer";
 
-const roboto = Roboto({
-  variable: "--font-roboto",
+const space_grotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
   subsets: ["latin"],
   weight: ["400"],
 });
 
-const merriweather = Merriweather({
-  variable: "--font-merriweather",
+const notable = Notable({
+  variable: "--font-notable",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const audio = Audiowide({
+  variable: "--font-audiowide",
   subsets: ["latin"],
   weight: ["400"],
 });
@@ -42,9 +48,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${roboto.variable} ${merriweather.variable} antialiased`}
+        className={`${space_grotesk.variable} ${audio.variable} ${notable.variable} antialiased`}
       >
-        <div className="flex flex-col bg-lightolive min-h-screen items-center p-4 font-[family-name:var(--font-roboto)]">
+        <div className="flex flex-col bg-olive min-h-screen items-center p-4 font-[family-name:var(--font-space-grotesk)]">
           <Navbar />
           {children}
           <Footer />

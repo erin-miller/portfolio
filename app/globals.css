@@ -19,3 +19,23 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.title {
+    @apply font-[family-name:var(--font-notable)]
+}
+
+h1 {
+    @apply font-[family-name:var(--font-space-grotesk)]
+}
+
+.filled-border {
+    @apply bg-moss border-moss border-2 rounded-3xl inline-block p-2
+}
+
+.dotted-border {
+    @apply border-dashed bg-darkolive border-moss border-4 rounded-3xl inline-block p-2
+}
+
+.icon-container {
+    @apply hover:text-cpurple flex items-center space-x-2
+}

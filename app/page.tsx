@@ -1,8 +1,8 @@
 export default function Home() {
   return (
     <div className="w-2/3 py-64 text-darkmoss">
-      <div className="font-bold text-5xl inline-block p-3 justify-center bg-moss border-moss border-2 rounded-full">
-        <div className="text-cbrown font-[family-name:var(--font-merriweather)]">
+      <div className="font-bold text-5xl justify-center dotted-border">
+        <div className="text-cbrown title">
           <h1>From Concept to Code:</h1>
         </div>
       </div>

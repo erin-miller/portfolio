@@ -10,9 +10,9 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="text-white p-2 w-2/3 font-[family-name:var(--font-merriweather)]">
-      <div className="container flex justify-between items-center">
-        <div className="text-4xl font-bold w-full">
+    <nav className="text-cbrown text-nowrap w-2/3 font-[family-name:var(--font-merriweather)]">
+      <div className="container flex">
+        <div className="hover:text-cbrown text-4xl font-bold w-full text-cpurple pr-5">
           <Link href="/">ERIN MILLER</Link>
         </div>
 
@@ -34,24 +34,24 @@ export default function Navbar() {
           </svg>
         </button>
 
-        <div className="hidden md:flex text-xl">
+        <div className="hidden md:flex font-bold text-xl">
           <ul className="flex space-x-4">
-            <li>
+            <li className="hover:text-moss">
               <Link href="/contact">CONTACT</Link>
             </li>
-            <li>
+            <li className="hover:text-moss">
               <Link href="/resume">RESUME</Link>
             </li>
           </ul>
         </div>
 
         {isVisible && (
-          <div className="absolute top-12 right-0 bg-gray-200 text-black font-bold rounded-sm text-center md:hidden">
+          <div className="absolute top-14 right-16 bg-moss text-cpurple font-bold rounded-xl text-center md:hidden">
             <ul className="space-y-2 p-4">
-              <li>
+              <li className="hover:text-cbrown">
                 <Link href="/contact">CONTACT</Link>
               </li>
-              <li>
+              <li className="hover:text-cbrown">
                 <Link href="/resume">RESUME</Link>
               </li>
             </ul>

@@ -11,6 +11,11 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        cpurple: "#2E0014",
+        cbrown: "#4c2523",
+        moss: "#809848",
+        darkmoss: "#4b4f28",
+        lightolive: "#b7cf92",
       },
     },
   },

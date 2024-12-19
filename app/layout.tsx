@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import { Roboto, Merriweather } from "next/font/google";
+import Navbar from "./navbar";
+import Footer from "./footer";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -42,7 +44,11 @@ export default function RootLayout({
       <body
         className={`${roboto.variable} ${merriweather.variable} antialiased`}
       >
-        {children}
+        <div className="flex flex-col bg-lightolive min-h-screen items-center p-4 font-[family-name:var(--font-roboto)]">
+          <Navbar />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );

@@ -32,12 +32,7 @@ export default function Navbar() {
               </Link>
             </li>
             <li>
-              <Link
-                href={resumeLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="nav-btn"
-              >
+              <Link href={resumeLink} target="_blank" className="nav-btn">
                 RESUME
               </Link>
             </li>
@@ -82,10 +77,10 @@ export default function Navbar() {
             <div className="absolute right-1 p-1 text-cbrown text-center font-bold rounded-xl shadow-md bg-darkolive border-darkmoss border-2 text-left md:hidden">
               <ul className="space-y-2 p-2">
                 <li className="hover:text-darkmoss hover:bg-olive rounded-full">
-                  <Link href="/">HOME</Link>
+                  <Link href={homeLink}>HOME</Link>
                 </li>
                 <li className="hover:text-darkmoss hover:bg-olive rounded-full">
-                  <Link href="/resume">RESUME</Link>
+                  <Link href={resumeLink}>RESUME</Link>
                 </li>
               </ul>
             </div>

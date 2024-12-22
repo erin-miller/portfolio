@@ -13,18 +13,15 @@ export default function Navbar() {
   const resumeLink = "/resume.pdf";
 
   return (
-    <nav className="h1 text-darkmoss text-nowrap w-2/3">
-      <div className="container flex min-w-min">
+    <nav className="nav-container">
+      <div className="container flex justify-between items-center w-full">
         <div className="text-4xl font-bold w-full text-olive">
-          <Link
-            href="/"
-            className="title hover:text-darkolive bg-cbrown border-cbrown border-2 rounded-3xl inline-block pb-2 px-2"
-          >
+          <Link href="/" className="title">
             ERIN MILLER
           </Link>
         </div>
 
-        <div className="hidden md:flex font-bold text-xl">
+        <div className="nav-btn-container">
           <ul className="flex space-x-4">
             <li>
               <Link href={homeLink} className="nav-btn">
@@ -73,13 +70,14 @@ export default function Navbar() {
               />
             </svg>
           </button>
+
           {isVisible && (
-            <div className="absolute right-1 p-1 text-cbrown text-center font-bold rounded-xl shadow-md bg-darkolive border-darkmoss border-2 text-left md:hidden">
+            <div className="dropdown-menu animate-fade-in">
               <ul className="space-y-2 p-2">
-                <li className="hover:text-darkmoss hover:bg-olive rounded-full">
+                <li className="dropdown-item">
                   <Link href={homeLink}>HOME</Link>
                 </li>
-                <li className="hover:text-darkmoss hover:bg-olive rounded-full">
+                <li className="dropdown-item px-1">
                   <Link href={resumeLink}>RESUME</Link>
                 </li>
               </ul>

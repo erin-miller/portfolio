@@ -20,12 +20,19 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.title {
-    @apply font-[family-name:var(--font-notable)] scale-up
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
-h1 {
-    @apply font-[family-name:var(--font-space-grotesk)]
+.title {
+    @apply font-[family-name:var(--font-notable)] scale-up hover:text-darkolive bg-cbrown border-cbrown border-2 rounded-3xl 
+    inline-block pb-2 px-2 shadow-md shadow-darkolive
+}
+
+.splash {
+    @apply font-[family-name:var(--font-space-grotesk)] font-bold text-3xl md:text-4xl lg:text-5xl
 }
 
 .filled-border {
@@ -48,10 +55,35 @@ h1 {
     @apply h-full w-full fill-current stroke-current;
 }
 
+.nav-container {
+    @apply text-darkmoss text-nowrap page-length
+}
+
 .nav-btn {
-    @apply hover:text-cbrown scale-up filled-border 
+    @apply hover:text-darkmoss hover:text-cbrown rounded-full scale-up filled-border 
+}
+
+.nav-btn-container {
+    @apply hidden md:flex font-bold text-xl items-center pl-4
+}
+
+.dropdown-menu {
+    @apply absolute right-1 p-1 text-cbrown text-center font-bold
+    rounded-xl shadow-md bg-darkolive border-darkmoss border-2 text-left md:hidden
+}
+
+.dropdown-item {
+    @apply hover:text-darkmoss hover:bg-olive rounded-full
 }
 
 .scale-up {
     @apply hover:scale-105 transition duration-150
+}
+
+.test-outline {
+    @apply outline outline-red-500
+}
+
+.page-length {
+    @apply w-full md:w-2/3 lg:w-1/2
 }

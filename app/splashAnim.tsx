@@ -24,7 +24,7 @@ export default function SplashAnim() {
   }, []);
 
   return (
-    <div className="text-cbrown">
+    <div>
       <h1>
         {displayText}
         <span className={isBlinking ? "blink" : ""}>:</span>

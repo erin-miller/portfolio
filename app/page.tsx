@@ -1,4 +1,4 @@
-import SplashAnim from "./splashAnim";
+import SplashAnim from "./components/splashAnim";
 
 export default function Home() {
   return (

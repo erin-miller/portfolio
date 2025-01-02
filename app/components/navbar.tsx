@@ -4,13 +4,20 @@ import { useState } from "react";
 
 export default function Navbar() {
   const [isVisible, setIsVisible] = useState(false);
+  const [showProjects, setShowProjects] = useState(false);
 
   const toggleMenu = () => {
     setIsVisible(!isVisible);
   };
 
+  const toggleProjects = () => {
+    setShowProjects(!showProjects);
+  };
+
   const homeLink = "/";
   const resumeLink = "/resume.pdf";
+  const calcLink = "/projects/toonapicalc";
+  const scoutLink = "/projects/toonscout";
 
   return (
     <nav className="nav-container">
@@ -33,7 +40,24 @@ export default function Navbar() {
                 RESUME
               </Link>
             </li>
+            <li>
+              <button onClick={toggleProjects} className="nav-btn">
+                PROJECTS
+              </button>
+            </li>
           </ul>
+          {showProjects && (
+            <div className="dropdown-menu animate-fade-in mt-36">
+              <ul className="space-y-2 p-2">
+                <li className="dropdown-item">
+                  <Link href={scoutLink}>ToonScout</Link>
+                </li>
+                <li className="dropdown-item px-1">
+                  <Link href={calcLink}>Toon API Calculator</Link>
+                </li>
+              </ul>
+            </div>
+          )}
         </div>
 
         {/* menu btn */}
@@ -72,7 +96,7 @@ export default function Navbar() {
           </button>
 
           {isVisible && (
-            <div className="dropdown-menu animate-fade-in">
+            <div className="dropdown-menu animate-fade-in md:hidden">
               <ul className="space-y-2 p-2">
                 <li className="dropdown-item">
                   <Link href={homeLink}>HOME</Link>

@@ -20,70 +20,71 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 .title {
-    @apply font-[family-name:var(--font-notable)] scale-up hover:text-darkolive bg-cbrown border-cbrown border-2 rounded-3xl 
-    inline-block pb-2 px-2 shadow-md shadow-darkolive
+  @apply font-[family-name:var(--font-notable)] scale-up hover:text-darkolive bg-cbrown border-cbrown border-2 rounded-3xl 
+    inline-block pb-2 px-2 shadow-md shadow-darkolive;
 }
 
 .splash {
-    @apply font-[family-name:var(--font-space-grotesk)] font-bold text-3xl md:text-4xl lg:text-5xl
+  @apply font-[family-name:var(--font-space-grotesk)] font-bold text-3xl md:text-4xl lg:text-5xl;
 }
 
 .filled-border {
-    @apply bg-darkolive border-darkmoss border-2 rounded-3xl inline-block p-2
+  @apply bg-darkolive border-darkmoss border-2 rounded-3xl inline-block p-2;
 }
 
 .filled-border:hover {
-    @apply border-cbrown
+  @apply border-cbrown;
 }
 
 .dotted-border {
-    @apply border-dashed bg-darkolive border-moss border-4 rounded-3xl inline-block p-2
+  @apply border-dashed bg-darkolive border-moss border-4 rounded-3xl inline-block p-2;
 }
 
 .icon-container {
-    @apply hover:text-cpurple flex items-center space-x-2 hover:scale-105 
+  @apply hover:text-cpurple flex items-center space-x-2 hover:scale-105;
 }
 
 .icon {
-    @apply h-full w-full fill-current stroke-current;
+  @apply h-full w-full fill-current stroke-current;
 }
 
 .nav-container {
-    @apply text-darkmoss text-nowrap page-length
+  @apply text-darkmoss text-nowrap page-length;
 }
 
 .nav-btn {
-    @apply hover:text-darkmoss hover:text-cbrown rounded-full scale-up filled-border 
+  @apply hover:text-cbrown rounded-full scale-up filled-border;
 }
 
 .nav-btn-container {
-    @apply hidden md:flex font-bold text-xl items-center pl-4
+  @apply relative hidden md:flex font-bold text-xl items-center pl-4;
 }
 
 .dropdown-menu {
-    @apply absolute right-1 p-1 text-cbrown text-center font-bold
-    rounded-xl shadow-md bg-darkolive border-darkmoss border-2 text-left md:hidden
+  @apply absolute right-1 p-1 text-cbrown font-bold text-center
+    rounded-xl shadow-md bg-darkolive border-darkmoss border-2;
 }
 
 .dropdown-item {
-    @apply hover:text-darkmoss hover:bg-olive rounded-full
+  @apply hover:text-darkmoss hover:bg-olive rounded-full text-lg;
 }
 
 .scale-up {
-    @apply hover:scale-105 transition duration-150
+  @apply hover:scale-105 transition duration-150;
 }
 
 .test-outline {
-    @apply outline outline-red-500
+  @apply outline outline-red-500;
 }
 
 .page-length {
-    @apply w-full md:w-2/3 lg:w-1/2
+  @apply w-full md:w-2/3 lg:w-1/2;
 }

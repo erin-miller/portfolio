@@ -33,7 +33,8 @@ body {
 }
 
 .splash {
-  @apply font-[family-name:var(--font-space-grotesk)] font-bold text-3xl md:text-4xl lg:text-5xl;
+  @apply font-[family-name:var(--font-space-grotesk)] font-bold text-cbrown
+  text-3xl md:text-4xl lg:text-5xl;
 }
 
 .filled-border {
@@ -87,4 +88,24 @@ body {
 
 .page-length {
   @apply w-full md:w-2/3 lg:w-1/2;
+}
+
+.project-title {
+  @apply justify-center dotted-border splash pb-4;
+}
+
+.project-header {
+  @apply text-3xl py-6 font-bold;
+}
+
+.project-desc {
+  @apply text-2xl space-y-4;
+}
+
+.project-link {
+  @apply text-cpurple hover:text-moss hover:underline;
+}
+
+.project-example {
+  @apply rounded-lg shadow-lg;
 }

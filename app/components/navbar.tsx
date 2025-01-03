@@ -1,10 +1,11 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Navbar() {
   const [isVisible, setIsVisible] = useState(false);
   const [showProjects, setShowProjects] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const toggleMenu = () => {
     setIsVisible(!isVisible);
@@ -14,13 +15,31 @@ export default function Navbar() {
     setShowProjects(!showProjects);
   };
 
+  // close project menu if anywhere else is clicked
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setShowProjects(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   const homeLink = "/";
   const resumeLink = "/resume.pdf";
   const calcLink = "/projects/toonapicalc";
   const scoutLink = "/projects/toonscout";
 
   return (
-    <nav className="nav-container">
+    <nav className="nav-container" ref={dropdownRef}>
       <div className="container flex justify-between items-center w-full">
         <div className="text-4xl font-bold w-full text-olive">
           <Link href="/" className="title">
@@ -50,10 +69,14 @@ export default function Navbar() {
             <div className="dropdown-menu animate-fade-in mt-36">
               <ul className="space-y-2 p-2">
                 <li className="dropdown-item">
-                  <Link href={scoutLink}>ToonScout</Link>
+                  <Link href={scoutLink} onClick={() => setShowProjects(false)}>
+                    ToonScout
+                  </Link>
                 </li>
                 <li className="dropdown-item px-1">
-                  <Link href={calcLink}>Toon API Calculator</Link>
+                  <Link href={calcLink} onClick={() => setShowProjects(false)}>
+                    Toon API Calculator
+                  </Link>
                 </li>
               </ul>
             </div>

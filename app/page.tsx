@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="page-length py-32 text-darkmoss">
       <div className="justify-center dotted-border">
-        <div className="splash text-cbrown">
+        <div className="splash">
           <SplashAnim />
         </div>
       </div>

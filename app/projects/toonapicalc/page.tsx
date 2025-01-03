@@ -21,7 +21,8 @@ export default function ToonAPICalc() {
           >
             companion app API
           </a>
-          . It provides best path advising for various parts of a toon's data.
+          . It provides best path advising for various parts of a toon&apos;s
+          data.
         </div>
 
         <div className="project-header">Challenges</div>
@@ -61,8 +62,8 @@ export default function ToonAPICalc() {
           <div>
             To get around this, I based my calculations on the original Toontown
             Online values with some adjustments. Some locations, such as Chip &
-            Dales Acorn Acres, are not included in any fish's location data due
-            to a complete lack of knowledge in the area.
+            Dales Acorn Acres, are not included in any fish&apos;s location data
+            due to a complete lack of knowledge in the area.
           </div>
           <div>
             I spent a lot of time asking knowledgeable people in the community
@@ -72,7 +73,7 @@ export default function ToonAPICalc() {
           </div>
           <div>
             Finally, I had to find and compile all of the needed data for each
-            calculator. This included gathering every fish's locations and
+            calculator. This included gathering every fish&apos;s locations and
             rarities as well as defining all golf trophies and flower
             combinations. This task was quite tedious but I enjoyed it
             nonetheless.

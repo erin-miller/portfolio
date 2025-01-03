@@ -59,12 +59,12 @@ export default function ToonScout() {
             application.
           </div>
           <div>
-            During the web app's setup, it asks the user to authenticate with
-            Discord's OAuth process. The app stores the Discord user ID and
-            links it to the incoming character data. This information is sent to
-            the bot server and is updated in MongoDB. When a user executes a
-            Discord command, the bot retrieves the character data tied to their
-            ID.
+            During the web app&apos;s setup, it asks the user to authenticate
+            with Discord&apos;s OAuth process. The app stores the Discord user
+            ID and links it to the incoming character data. This information is
+            sent to the bot server and is updated in MongoDB. When a user
+            executes a Discord command, the bot retrieves the character data
+            tied to their ID.
           </div>
           <div>
             Furthermore, my lack of web development and UX design experience
